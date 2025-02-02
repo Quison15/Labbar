@@ -130,6 +130,8 @@ while True:
             print("Felaktigt val, välj ett alternativ mellan 1 och 10")
             time.sleep(1)
 
+#Hej
+
             
             
                 
