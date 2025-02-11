@@ -4,19 +4,19 @@ class TicTacToeBoard:
     def __init__(self):
         self.restart()
 
-    def get(self, row: int, col: int) -> str:
+    def get(self, row: int, col: int):
         return self._board[row][col]
     
-    def is_empty(self, row: int, col: int) -> bool:
+    def is_empty(self, row: int, col: int):
         return True if self._board[row][col] == '-' else False
     
-    def place(self,marker: str, row: int, col: int) -> bool:
+    def place(self,marker: str, row: int, col: int):
         if marker == 'X' or marker == 'O':
             self._board[row][col] = marker
             return True
         return False
     
-    def is_full(self) -> bool:
+    def is_full(self):
         for row in self._board:
             for col in row:
                 
@@ -24,7 +24,7 @@ class TicTacToeBoard:
                     return False
         return True
     
-    def is_winner(self,marker: str) -> bool:
+    def is_winner(self,marker: str):
         #Horisontell
         for row in self._board:
             if all(i == row[0] for i in row) and row[0] == marker:
@@ -42,14 +42,14 @@ class TicTacToeBoard:
                 
 
 
-    def restart(self) -> None:
+    def restart(self):
         self._board = [
             ["-","-","-"],
             ["-","-","-"],
             ["-","-","-"]
         ]
 
-    def print_board(self) -> None:
+    def print_board(self):
         for row in self._board:
             for col in row:
                 print(col, end =" ")

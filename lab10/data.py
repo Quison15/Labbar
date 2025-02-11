@@ -59,13 +59,10 @@ class Account:
 
 class Bank:
     def __init__(self):
-        # customer_id: Customer
-        self.customers: dict[str,Customer] = {}
-        # kontonummer: Account
-        self.accounts: dict[int,Account] = {}
 
-        #self.customers: list[Customer] = []
-        #self.accounts: list[Account] = []
+        self.customers: dict[str,Customer] = {}
+
+        self.accounts: dict[int,Account] = {}
 
     def add_customer(self,name: str, personal_nbr: str) -> str | None:
         customer_id = f"C{str(len(self.customers)+10)}"
@@ -112,7 +109,6 @@ class Bank:
         return list(self.accounts.values())
     
     def accounts_by_customer(self,customer_id: str) -> list[Account] | None:
-        #customer = next((c for c in self.customers if c.customer_id == customer_id),False)¨
         customer = self.customers.get(customer_id,False)
         if customer:
             return [account for account in self.all_accounts() if customer.customer_id == account.customer_id]

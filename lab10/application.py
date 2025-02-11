@@ -40,7 +40,7 @@ while True:
             if account_nbr != -1:
                 print(f"Kontot skapades med kontonummer {account_nbr}")
             else:
-                print(f"Kundnummret {customer_id} existerar ej så kunde ej skapa ett konto!")
+                print(f"Kundnummret {customer_id} existerar ej så kunde ej skapa ett konto")
             time.sleep(1)
         case 3:
             print("Du har valt att ta bort ett konto")
@@ -129,8 +129,6 @@ while True:
         case _:
             print("Felaktigt val, välj ett alternativ mellan 1 och 10")
             time.sleep(1)
-
-#Hej
 
             
             
